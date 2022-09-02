@@ -1,0 +1,15 @@
+.main{
+    margin-top: 2%;
+}
+.mainClick{
+    margin-top: 1%;
+}
+body{
+    background-image: url("crypto.jpg");
+    background-size:cover;
+    background-color: #cccccc;
+ 
+}
+h1,h4{
+    color: #cccccc;
+}
