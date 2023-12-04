@@ -4,6 +4,9 @@ const cont = document.getElementById("allContaint");
 
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
+    if(upd){
+        clearTimeout(upd);
+    }
     const ctype = form.elements.coinType.value;
     cont.classList.add('mainClick');
     cont.classList.remove('main');    
@@ -11,7 +14,7 @@ form.addEventListener('submit',(e)=>{
 
 });
 
-const fetchPrice = async(ctype) =>{  https://api.coinbase.com/v2/exchange-rates?currency=BTC
+const fetchPrice = async(ctype) =>{
     const r = await axios.get(`https://api.coinbase.com/v2/${ctype}?currency=USD`);
     showPrice(r.data.coin);
 }
