@@ -36,7 +36,7 @@ const showPrice = (coinData)=>{
     </td>
 </tr>
 <tr>
-    <td>${price}</td>
+    <td>${coin}</td>
     <td style="color:black;"><span style="font-size: 1.3em;">${price}</span> ${curr}</td>
 </tr>
 <tr>
