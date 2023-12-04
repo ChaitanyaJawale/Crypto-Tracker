@@ -7,14 +7,14 @@ form.addEventListener('submit',(e)=>{
     if(upd){
         clearTimeout(upd);
     }
-    const ctype = form.elements.coinType.value;
+    const ctype = form.elements.coinType.id;
     cont.classList.add('mainClick');
     cont.classList.remove('main');    
     fetchPrice(ctype);
 });
 
 const fetchPrice = async(ctype) =>{
-    const r = await axios.get(`https://api.coinstats.app/public/v1/coins/${ctype}?currency=USD`);
+    const r = await axios.get(`https://api.coinlore.net/api/ticker/?${ctype}`);
     showPrice(r.data.coin);
 }
 
