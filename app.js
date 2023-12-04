@@ -11,11 +11,10 @@ form.addEventListener('submit',(e)=>{
     cont.classList.add('mainClick');
     cont.classList.remove('main');    
     fetchPrice(ctype);
-
 });
 
 const fetchPrice = async(ctype) =>{
-    const r = await axios.get(`https://api.coinbase.com/v2/${ctype}?currency=USD`);
+    const r = await axios.get(`https://api.coinstats.app/public/v1/coins/${ctype}?currency=USD`);
     showPrice(r.data.coin);
 }
 
