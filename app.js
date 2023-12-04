@@ -1,12 +1,9 @@
 const form = document.querySelector('#searchForm');
 const res = document.querySelector('#resTable');
 const cont = document.getElementById("allContaint");
-var upd;
+
 form.addEventListener('submit',(e)=>{
     e.preventDefault();
-    if(upd){
-        clearTimeout(upd);
-    }
     const ctype = form.elements.coinType.id;
     cont.classList.add('mainClick');
     cont.classList.remove('main');    
